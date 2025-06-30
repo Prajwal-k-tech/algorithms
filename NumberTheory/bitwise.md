@@ -146,11 +146,20 @@ int max(int x, int y) {
 ```
 
 ### 4. Sign function
+-Bitwise way to do it: 
+```
+int sign(int x) {
+    return (!!x) | (x >> 31);
+}
+```
+- A non bitwise alternative
 ```cpp
 int sign(int x) {
     return (x > 0) - (x < 0);
-//previous version had a mistake, that has been fixed 
+//previous version had a mistake, that has been fixed
+//Non Bitwise Alternative, just as fast and recommended 
 ```
+
 
 ## Built-in Functions
 
