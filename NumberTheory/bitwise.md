@@ -148,9 +148,8 @@ int max(int x, int y) {
 ### 4. Sign function
 ```cpp
 int sign(int x) {
-    return (x >> 31) | ((-x) >> 31);
-}
-// Returns: -1 if negative, 0 if zero, 1 if positive
+    return (x > 0) - (x < 0);
+//previous version had a mistake, that has been fixed 
 ```
 
 ## Built-in Functions
