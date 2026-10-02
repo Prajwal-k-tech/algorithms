@@ -15,11 +15,11 @@ queue<int> q; //a queue
 void bfs(int start) {
   visited[start] = true; //set the starting node as visited
   q.push(start); //push it into the queue
-  while (!q.empty()) { //keep going until queue is empty 
-    int u = q.front(); q.pop(); //pop the first node in the queue 
+  while (!q.empty()) { //keep going until queue is empty
+    int u = q.front(); q.pop(); //pop the first node in the queue
     cout << u << " ";
     for (int v : adj[u]) {
-      if (!visited[v]) { //look at the neighbours, mark them as visited and push theme to the queue 
+      if (!visited[v]) { //look at the neighbours, mark them as visited and push theme to the queue
         visited[v] = true;
         q.push(v);
       }
@@ -28,9 +28,12 @@ void bfs(int start) {
   cout << endl;
 }
 int main(){
-    int startNode; //user can enter a start node, choose from 0 to 4, dont be stupid 
+    int startNode;
     cout << "Enter the starting node (0 to 4): ";
-    cin >> startNode;
+    if (!(cin >> startNode) || startNode < 0 || startNode >= static_cast<int>(adj.size())) {
+        cerr << "Enter a node between 0 and 4." << endl;
+        return 1;
+    }
     bfs(startNode);
     return 0;
 }
