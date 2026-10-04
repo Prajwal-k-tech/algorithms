@@ -7,7 +7,7 @@ A small personal archive of algorithm exercises and study notes.
 | `BFS.cpp` | Breadth-first traversal of a fixed five-node directed graph |
 | `Subarrays.md` | Notes on subarray techniques |
 | `NumberTheory/bitwise.md` | Bitwise-operation notes |
-| `NumberTheory/PrimalityTest.cpp` | Placeholder file; no implementation yet |
+| `NumberTheory/PrimalityTest.cpp` | Trial-division primality check for a signed 64-bit integer |
 
 ## Run the BFS example
 
@@ -19,3 +19,10 @@ g++ -std=c++17 BFS.cpp -o bfs
 ```
 
 Enter a starting node from 0 to 4. This is an educational collection rather than a general-purpose algorithm library. Notes and examples are not a claim of complete syllabus coverage.
+
+## Run the primality example
+
+```bash
+g++ -std=c++17 NumberTheory/PrimalityTest.cpp -o primality
+echo 97 | ./primality
+```
