@@ -19,3 +19,7 @@ g++ -std=c++17 BFS.cpp -o bfs
 ```
 
 Enter a starting node from 0 to 4. This is an educational collection rather than a general-purpose algorithm library. Notes and examples are not a claim of complete syllabus coverage.
+
+## Recovery
+
+See [RECOVERY.md](RECOVERY.md) for rebuilding an offloaded checkout and restoring its dependencies/data.
